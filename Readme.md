@@ -14,7 +14,7 @@ The foundational [**Ethereum module**](https://github.com/digitaldonkey/ethereum
 
 <small>This module provides a schema to manage smart contracts (ethereum_smartcontract.schema.yml)</small>
 
-[**Ethereum TXsigner**](to be merged) module is responsible for the frontend part of user interaction. It is currently limited to Web3 enabled Browsers, like [Metamask](https://metamask.io/) browser extension, [Brave Browser](https://brave.com/), [Mist browser](https://github.com/ethereum/mist/releases), but also supports [Metamask Mascara](https://github.com/MetaMask/mascara) (but Mascara is early Alpha by now). 
+[**Ethereum TXsigner**](https://github.com/jeffanthony/ethereum-1/tree/8.x-1.x/ethereum_txsigner) module is responsible for the frontend part of user interaction. It is currently limited to Web3 enabled Browsers, like [Metamask](https://metamask.io/) browser extension, [Brave Browser](https://brave.com/), [Mist browser](https://github.com/ethereum/mist/releases), but also supports [Metamask Mascara](https://github.com/MetaMask/mascara) (but Mascara is early Alpha by now). 
 
 <small>This module provides a web3 instance so you will have the same Web3 version and not depend what is injected by whichever browser/extension is used.</small>
 
