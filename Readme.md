@@ -1,14 +1,14 @@
-Drupal Ethereum
+# Drupal Ethereum
 ===============
  
 
 **Introduction**
 
-Drupal Ethereum Module enhances the Drupal ecosystem with Ethereum SmartContract functionality. 
+Drupal Ethereum Module(s) enhances the Drupal ecosystem with Ethereum SmartContract functionality. 
 
-The basic **Ethereum module** provides a basic framework to interact with the Blockchain via the [Ethereum-PHP](https://github.com/digitaldonkey/ethereum-php) library and is prepared to talk to different Ethereum network nodes (like development, testing, live).
+The foundational **Ethereum module** provides a basic framework to interact with Ethereum blockchains via the [Ethereum-PHP](https://github.com/digitaldonkey/ethereum-php) library and is prepared to talk to different Ethereum network nodes (i.e. development, testing, live).
 
-[**Ethereum Smartcontract**](https://github.com/digitaldonkey/ethereum/tree/8.x-1.x/ethereum_smartcontract) submodule allows you to manage smart contracts and use Drupal configuration to connect to the contract depending on the Network the contract has been deployed to. 
+[**Ethereum Smartcontract**](https://github.com/digitaldonkey/ethereum/tree/8.x-1.x/ethereum_smartcontract) submodule features smart contract management and provides Drupal configuration to connect to the contract whichever network the contract had been deployed. 
 
 <small>This module provides a schema to manage smart contracts (ethereum_smartcontract.schema.yml)</small>
 
@@ -20,15 +20,7 @@ The basic **Ethereum module** provides a basic framework to interact with the Bl
 
 <small>This module is an example of a Smartcontract. Currently refactoring to match the post POC infrastructure described above.</small>
 
-**Community**
 
-* [Gitter](https://gitter.im/drupal_ethereum)
-* [Issues](https://github.com/digitaldonkey/ethereum/issues)
-* [Drupal page](https://www.drupal.org/project/ethereum)
-* [Drupal Ethereum user group](https://groups.drupal.org/ethereum)
-* [PHP Library Issues](https://github.com/digitaldonkey/ethereum-php/issues)
-
-You might watch my Drupal conference talks from [Vienna](https://events.drupal.org/vienna2017/sessions/drupal-and-ethereum-blockchain) or [Baltimore](https://events.drupal.org/baltimore2017/sessions/drupal-and-ethereum-blockchain).
  
 ## Drupal Ethereum Getting started
 
@@ -102,6 +94,16 @@ drush en ethereum restui admin_toolbar_tools -y
 
 Visit /admin/config/ethereum/network, save the configuration settings then check the status page at /admin/reports/ethereum to verify that it's working.
 
+## Community
+
+* [Gitter](https://gitter.im/drupal_ethereum)
+* [Issues](https://github.com/digitaldonkey/ethereum/issues)
+* [Drupal page](https://www.drupal.org/project/ethereum)
+* [Drupal Ethereum user group](https://groups.drupal.org/ethereum)
+* [PHP Library Issues](https://github.com/digitaldonkey/ethereum-php/issues)
+
+You might watch my Drupal conference talks from [Vienna](https://events.drupal.org/vienna2017/sessions/drupal-and-ethereum-blockchain) or [Baltimore](https://events.drupal.org/baltimore2017/sessions/drupal-and-ethereum-blockchain).
+
 ## Networks & Ethereum nodes
 
 **Networks** are Drupal configuration. This module provides a List of networks ([ethereum.ethereum_networks.yml](https://github.com/digitaldonkey/ethereum/blob/8.x-1.x/config/install/ethereum.ethereum_networks.yml)).
@@ -115,7 +117,7 @@ Currently there is no UI for editing networks. You can add new network IDs by ch
 **Default Network** setting allows to select a default route Drupal will use to connect to Ethereum Blockchain. 
 
 
-## Running your own Ethereum node
+## Running a local/private Ethereum node
 
 **Ganache** is a very easy to use Ethereum Blockchain for development and testing. It is [available for many platforms](https://truffleframework.com/ganache) and has a Block explorer build in. 
 
@@ -127,7 +129,6 @@ On a Mac this looks like this (be aware that the "*" allows connections from any
 ``` 
  geth --testnet  --rpc --rpccorsdomain="*"
 ``` 
-
 
 ## Development environment with Truffle
 
