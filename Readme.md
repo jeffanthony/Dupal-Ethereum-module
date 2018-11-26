@@ -1,6 +1,4 @@
 # Drupal Ethereum
-===============
- 
 
 ## The Modules
 
@@ -21,8 +19,6 @@ The foundational [**Ethereum module**](https://github.com/digitaldonkey/ethereum
 [**Ethereum User connector**](https://github.com/digitaldonkey/ethereum/blob/8.x-1.x/ethereum_user_connector/Readme.md) is a submodule providing a very simple registry contract (See the [Prove of concept (POC) video](https://www.youtube.com/watch?v=Y5Sa7QtpXSE). This is a early example how the actual applications would be Able to use the infrastructure provided by Drupal Ethereum module.
 
 <small>This module is an example of a Smartcontract. Currently refactoring to match the post POC infrastructure described above.</small>
-
-
  
 ## Installation
 
@@ -49,7 +45,6 @@ Bitnami etc...
 * Run `composer install` to get all required dependencies
 
 * Make sure Drupal has a Ethereum Node to read from by configuring *Configure Ethereum connection* (/admin/config/ethereum/network). **Saving the form settings** will validate the current settings and let you know if something is wrong. 
-
  
 ### Long version
 
@@ -75,7 +70,6 @@ drush site-install standard --db-url="mysql://root:root@localhost:3306/drupalEth
 ```
 
 _DON'T FORGET TO CHANGE YOUR PASSWORD AFTER FIRST LOGIN._
-
 
 **Composer install**
 
