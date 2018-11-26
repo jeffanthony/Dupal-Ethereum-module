@@ -2,11 +2,13 @@
 ===============
  
 
-**Introduction**
+## The Modules
 
 Drupal Ethereum Module(s) enhances the Drupal ecosystem with Ethereum SmartContract functionality. 
 
-The foundational **Ethereum module** provides a basic framework to interact with Ethereum blockchains via the [Ethereum-PHP](https://github.com/digitaldonkey/ethereum-php) library and is prepared to talk to different Ethereum network nodes (i.e. development, testing, live).
+The foundational [**Ethereum module**](https://github.com/digitaldonkey/ethereum/blob/8.x-1.x/ethereum.module) provides a basic framework to interact with the Blockchain via the [Ethereum-PHP](https://github.com/digitaldonkey/ethereum-php) library. 
+
+<small>This module is prepared to talk to different Ethereum network nodes (like development, testing, live)</small>
 
 [**Ethereum Smartcontract**](https://github.com/digitaldonkey/ethereum/tree/8.x-1.x/ethereum_smartcontract) submodule features smart contract management and provides Drupal configuration to connect to the contract whichever network the contract had been deployed. 
 
@@ -22,16 +24,32 @@ The foundational **Ethereum module** provides a basic framework to interact with
 
 
  
-## Drupal Ethereum Getting started
+## Installation
 
-**TLDR; Quick set-up**
+### TLDR; Quick set-up
+Bitnami etc...
 
-* Add Web3js to the "repositories" section of your root `composer.json` (see "Add the following to the repositories section..."  below)
+* Add the following to the "repositories" section of your root `composer.json` file:
+
+```
+{
+    "type": "package",
+    "package": {
+        "name": "ethereum/web3.js",
+        "version": "1.0.0-beta.35",
+        "type": "drupal-library",
+        "dist": {
+            "url": "https://github.com/ethereum/web3.js/archive/v1.0.0-beta.35.zip",
+            "type": "zip"
+        }
+    }
+},
+```
+* Run `composer require drupal/ethereum:1.x-dev` to get these modules
 * Run `composer install` to get all required dependencies
-* Make sure Drupal has a Ethereum Node to read from by configuring *Configure Ethereum connection* (/admin/config/ethereum/network). **Saving the form settings** will validate the current settings and let you know if something is wrong. 
-* You can start testing with Infura networks provided. 
 
-If you used [composer](https://www.lullabot.com/articles/goodbye-drush-make-hello-composer) to install Drupal core and the Ethereum module everything should work out of the box using <a href="infura.io">Infura's free service</a> to connect to the Ethereum network. 
+* Make sure Drupal has a Ethereum Node to read from by configuring *Configure Ethereum connection* (/admin/config/ethereum/network). **Saving the form settings** will validate the current settings and let you know if something is wrong. 
+
  
 ### Long version
 
@@ -94,7 +112,7 @@ drush en ethereum restui admin_toolbar_tools -y
 
 Visit /admin/config/ethereum/network, save the configuration settings then check the status page at /admin/reports/ethereum to verify that it's working.
 
-## Community
+# Community
 
 * [Gitter](https://gitter.im/drupal_ethereum)
 * [Issues](https://github.com/digitaldonkey/ethereum/issues)
@@ -103,6 +121,8 @@ Visit /admin/config/ethereum/network, save the configuration settings then check
 * [PHP Library Issues](https://github.com/digitaldonkey/ethereum-php/issues)
 
 You might watch my Drupal conference talks from [Vienna](https://events.drupal.org/vienna2017/sessions/drupal-and-ethereum-blockchain) or [Baltimore](https://events.drupal.org/baltimore2017/sessions/drupal-and-ethereum-blockchain).
+
+# Additional Information
 
 ## Networks & Ethereum nodes
 
@@ -116,8 +136,11 @@ Currently there is no UI for editing networks. You can add new network IDs by ch
 
 **Default Network** setting allows to select a default route Drupal will use to connect to Ethereum Blockchain. 
 
+### Using an Ethereum service
 
-## Running a local/private Ethereum node
+**Infura** You can begin testing with Infura networks provided. 
+
+### Running a local/private Ethereum node
 
 **Ganache** is a very easy to use Ethereum Blockchain for development and testing. It is [available for many platforms](https://truffleframework.com/ganache) and has a Block explorer build in. 
 
