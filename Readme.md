@@ -4,20 +4,16 @@
 
 Drupal Ethereum Module(s) enhances the Drupal ecosystem with Ethereum SmartContract functionality. 
 
-The foundational [**Ethereum module**](https://github.com/digitaldonkey/ethereum/blob/8.x-1.x/ethereum.module) provides a basic framework to interact with the Blockchain via the [Ethereum-PHP](https://github.com/digitaldonkey/ethereum-php) library. 
-
+[**Ethereum module**](https://github.com/digitaldonkey/ethereum/blob/8.x-1.x/ethereum.module) provides a basic framework to interact with the Blockchain via the [Ethereum-PHP](https://github.com/digitaldonkey/ethereum-php) library. 
 <small>This module is prepared to talk to different Ethereum network nodes (like development, testing, live)</small>
 
 [**Ethereum Smartcontract**](https://github.com/digitaldonkey/ethereum/tree/8.x-1.x/ethereum_smartcontract) submodule features smart contract management and provides Drupal configuration to connect to the contract whichever network the contract had been deployed. 
-
 <small>This module provides a schema to manage smart contracts (ethereum_smartcontract.schema.yml)</small>
 
 [**Ethereum TXsigner**](https://github.com/jeffanthony/ethereum-1/tree/8.x-1.x/ethereum_txsigner) module is responsible for the frontend part of user interaction. It is currently limited to Web3 enabled Browsers, like [Metamask](https://metamask.io/) browser extension, [Brave Browser](https://brave.com/), [Mist browser](https://github.com/ethereum/mist/releases), but also supports [Metamask Mascara](https://github.com/MetaMask/mascara) (but Mascara is early Alpha by now). 
-
 <small>This module provides a web3 instance so you will have the same Web3 version and not depend what is injected by whichever browser/extension is used.</small>
 
 [**Ethereum User connector**](https://github.com/digitaldonkey/ethereum/blob/8.x-1.x/ethereum_user_connector/Readme.md) is a submodule providing a very simple registry contract (See the [Prove of concept (POC) video](https://www.youtube.com/watch?v=Y5Sa7QtpXSE). This is a early example how the actual applications would be Able to use the infrastructure provided by Drupal Ethereum module.
-
 <small>This module is an example of a Smartcontract. Currently refactoring to match the post POC infrastructure described above.</small>
  
 ## Installation
