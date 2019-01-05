@@ -46,7 +46,7 @@ Bitnami etc...
  
 ### Long version
 
-The quickest way to do this is to follow the steps below. You will need PHP [Composer](https://getcomposer.org/) and [drush](http://www.drush.org/) installed on your system. Alternatively, you can <a href="https://www.drupal.org/docs/8/install">install Drupal manually</a>. 
+You will need PHP [Composer](https://getcomposer.org/) and [drush](http://www.drush.org/) installed on your system. Alternatively, you can <a href="https://www.drupal.org/docs/8/install">install Drupal manually</a>. 
 
 **Install Drupal**
 
