@@ -21,7 +21,7 @@ Drupal Ethereum Module(s) enhances the Drupal ecosystem with Ethereum SmartContr
 ## Installation
 
 ### TLDR; Quick set-up
-Bitnami etc...
+Install Bitnami's Drupal package to set-up a local environment including Composer and Drush.
 
 * Add the following to the "repositories" section of your root `composer.json` file:
 
@@ -39,19 +39,23 @@ Bitnami etc...
     }
 },
 ```
-* Run `composer require drupal/ethereum:1.x-dev` to get these modules
+* Run `composer require drupal/ethereum:1.x-dev drupal/restui drupal/admin_toolbar` to get these modules
 * Run `composer install` to get all required dependencies
+* Run `drush en ethereum restui admin_toolbar_tools -y` to enable these modules
+* Visit `127.0.0.1/drupal/admin/config/ethereum/network` and setup the Ganache network. **Saving the form settings** will validate the current settings and inform if something is wrong.
 
-* Make sure Drupal has a Ethereum Node to read from by configuring *Configure Ethereum connection* (/admin/config/ethereum/network). **Saving the form settings** will validate the current settings and let you know if something is wrong. 
- 
-### Long version
 
-You will need PHP [Composer](https://getcomposer.org/) and [drush](http://www.drush.org/) installed on your system. Alternatively, you can <a href="https://www.drupal.org/docs/8/install">install Drupal manually</a>. 
+
+### Longer version
+
+You will need PHP [Composer](https://getcomposer.org/) and [drush](http://www.drush.org/) helps to have installed on your system. Alternatively, you can <a href="https://www.drupal.org/docs/8/install">install Drupal manually</a>. 
 
 **Install Drupal**
 
 ```
 # Download latest Drupal
+# Composer commands must be run from the drupal directory
+
 composer create-project drupal-composer/drupal-project:~8.0 drupal --stability dev --no-interaction
 
 # Create a Database
@@ -64,14 +68,12 @@ mkdir drupal/config
 # Change to web root 
 cd drupal/web/
 # Scripted drupal installation. Revalidate the database. It will be overwritten.
-drush site-install standard --db-url="mysql://root:root@localhost:3306/drupalEthereumTest.local" --account-name="tho" --account-pass="password" --site-name="drupalEthereum.local" --account-mail="email@donkeymedia.eu" --site-mail="email@donkeymedia.eu" --config-dir="../config" --notify="global"
+drush site-install standard --db-url="mysql://root:root@localhost:3306/drupalEthereumTest.local" --account-name="theo" --account-pass="password1000" --site-name="drupalEthereum.local" --account-mail="email@example.com" --site-mail="email@example.com" --config-dir="../config" --notify="global"
 ```
 
 _DON'T FORGET TO CHANGE YOUR PASSWORD AFTER FIRST LOGIN._
 
-**Composer install**
-
-[RestUI](https://www.drupal.org/project/restui) is a user interface for Drupal 8's REST module. You'll need it for development.
+**Web3.js install**
 
 Add the following to the "repositories" section of your root `composer.json` file:
 
@@ -90,7 +92,7 @@ Add the following to the "repositories" section of your root `composer.json` fil
 },
 ```
 
-Composer commands need to be run from the drupal directory
+Composer commands must be run from the drupal directory
 
 ```
 # Download using composer
